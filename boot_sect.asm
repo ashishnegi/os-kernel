@@ -1,4 +1,3 @@
-
 %macro print 1
 		mov al, %1
 		int 10h
