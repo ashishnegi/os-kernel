@@ -1,6 +1,5 @@
 [org 0x7c00]
 
-
 mov bx, hello_
 call print_
 
