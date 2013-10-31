@@ -1,4 +1,4 @@
-:: @echo off
+@echo off
 setlocal EnableDelayedExpansion
 set qemu_base=Qemu-1.5.3-windows\Qemu-windows-1.5.3
 set boot_base=boot
