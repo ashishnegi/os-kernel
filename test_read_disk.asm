@@ -1,3 +1,6 @@
+; Expected Output
+; 0xface0xcafe
+
 [org 0x7c00]
 
 mov [Boot_Drive], dl			; dl has got boot drive, save it.
@@ -23,8 +26,6 @@ jmp $
 %include "print_string.asm"
 %include "print_hex.asm"
 
-disk_error_msg:
-	db "Error in reading from disk", 0
 
 ; Global Variables
 Boot_Drive:

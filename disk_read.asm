@@ -2,6 +2,7 @@
 ; bx determines the position where it would be read
 
 disk_read:
+	pusha
 	push dx						; store DX
 
 	mov ah, 0x02				; ah for reading from disk
@@ -19,9 +20,13 @@ disk_read:
 	cmp dh, al
 	jne disk_error				; not all sectors read
 
+	popa
 	ret							; successful
 
 disk_error:
 	mov bx, [disk_error_msg]
 	call print_		
 	jmp $
+
+disk_error_msg:
+	db "Error in reading from disk", 0
