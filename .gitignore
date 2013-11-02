@@ -1,1 +1,4 @@
 Qemu-1.5.3-windows/
+*.bin
+*.o
+kernel/*.txt
