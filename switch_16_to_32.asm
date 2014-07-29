@@ -11,7 +11,7 @@ mov eax, cr0				; set the first bit of cr0
 or eax, 0x1
 mov cr0, eax
 
-jmp dword CODE_SEG:start_protected_mode			; flush the cpu pipeline
+jmp CODE_SEG:start_protected_mode			; flush the cpu pipeline
 
 [bits 32]
 
